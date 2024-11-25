@@ -21,7 +21,7 @@ grains:
         store: Torque-Assets
         path: terraform/vm-from-template-wait-for-ip-no-creds
       agent:
-        name: vcenter3
+        name: '{{ .params.default_agent }}'
       inputs:
         - hostname: '{{ .params.vcenter_hostname }}'
         - username: '{{ .params.vcenter_username }}'
