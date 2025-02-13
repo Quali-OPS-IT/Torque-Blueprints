@@ -17,7 +17,7 @@ grains:
     kind: terraform
     spec:
       source:
-        store: Torque_Bluprints
+        store: '{{ .params.default_assets_repository}}'
         path: terraform/vm-from-template-wait-for-ip-no-creds
       agent:
         name: '{{ .params.default_agent }}'
