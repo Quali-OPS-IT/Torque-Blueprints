@@ -2,22 +2,22 @@ spec_version: 2
 description: CloudShell 2023-3GA pre-installed VM on vCenter
 outputs:
   QualiX RDP Link:
-    value: '{{ .grains.["CloudShell_2023-3_GA"].outputs.qualix_link }}'
+    value: '{{ .grains.["CloudShell_2023_3_GA"].outputs.qualix_link }}'
     kind: link
   VM IP:
-    value: '{{ .grains.["CloudShell_2023-3_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
+    value: '{{ .grains.["CloudShell_2023_3_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
   VM Name:
-    value: '{{ .grains.["CloudShell_2023-3_GA"].outputs.vsphere_virtual_machine_name }}'
+    value: '{{ .grains.["CloudShell_2023_3_GA"].outputs.vsphere_virtual_machine_name }}'
   OS Login:
     value: Administrator
   Os Password:
     value: Password1
 grains:
-  CloudShell_2023-3_GA:
+  CloudShell_2023_3_GA:
     kind: terraform
     spec:
       source:
-        store: Torque_Bluprints
+        store: '{{ .params.default_assets_repository}}'
         path: terraform/vm-from-template-wait-for-ip-no-creds
       agent:
         name: '{{ .params.default_agent }}'
