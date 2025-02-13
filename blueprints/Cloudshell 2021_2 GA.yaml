@@ -1,25 +1,25 @@
 spec_version: 2
 
-description: CloudShell 2021.2GA pre-installed VM on vCenter
+description: CloudShell 2021_2GA pre-installed VM on vCenter
 outputs:
   QualiX RDP Link:
-    value: '{{ .grains.["Cloudshell_2021.2_GA"].outputs.qualix_link }}'
+    value: '{{ .grains.["Cloudshell_2021_2_GA"].outputs.qualix_link }}'
     kind: link
   VM IP:
-    value: '{{ .grains.["Cloudshell_2021.2_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
+    value: '{{ .grains.["Cloudshell_2021_2_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
   VM Name:
-    value: '{{ .grains.["Cloudshell_2021.2_GA"].outputs.vsphere_virtual_machine_name }}'
+    value: '{{ .grains.["Cloudshell_2021_2_GA"].outputs.vsphere_virtual_machine_name }}'
   OS Login:
     value: Administrator
   Os Password:
     value: Password1
 
 grains:
-  Cloudshell_2021.2_GA:
+  Cloudshell_2021_2_GA:
     kind: terraform
     spec:
       source:
-        store: Torque-Assets
+        store: '{{ .params.default_assets_repository}}'
         path: terraform/vm-from-template-wait-for-ip-no-creds
       agent:
         name: '{{ .params.default_agent }}'
