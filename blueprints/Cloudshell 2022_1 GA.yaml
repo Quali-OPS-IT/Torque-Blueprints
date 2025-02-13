@@ -3,19 +3,19 @@ spec_version: 2
 description: CloudShell 2022.1GA pre-installed VM on vCenter
 outputs:
   QualiX RDP Link:
-    value: '{{ .grains.["Cloudshell_2022.1_GA"].outputs.qualix_link }}'
+    value: '{{ .grains.["Cloudshell_2022_1_GA"].outputs.qualix_link }}'
     kind: link
   VM IP:
-    value: '{{ .grains.["Cloudshell_2022.1_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
+    value: '{{ .grains.["Cloudshell_2022_1_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
   VM Name:
-    value: '{{ .grains.["Cloudshell_2022.1_GA"].outputs.vsphere_virtual_machine_name }}'
+    value: '{{ .grains.["Cloudshell_2022_1_GA"].outputs.vsphere_virtual_machine_name }}'
   OS Login:
     value: Administrator
   Os Password:
     value: Password1
 
 grains:
-  Cloudshell_2022.1_GA:
+  Cloudshell_2022_1_GA:
     kind: terraform
     spec:
       source:
