@@ -13,11 +13,11 @@ outputs:
   Os Password:
     value: Password1
 grains:
-  CloudShell_2023.1_GA:
+  CloudShell_2023-1_GA:
     kind: terraform
     spec:
       source:
-        store: Torque-Bluprints
+        store: Torque-Assets
         path: terraform/vm-from-template-wait-for-ip-no-creds
       agent:
         name: '{{ .params.default_agent }}'
