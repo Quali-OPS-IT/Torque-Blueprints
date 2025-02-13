@@ -1,5 +1,5 @@
 spec_version: 2
-description: CloudShell 2023_1GA pre-installed VM on vCenter
+description: CloudShell 2023_1_GA pre-installed VM on vCenter
 outputs:
   QualiX RDP Link:
     value: '{{ .grains.["CloudShell_2023_1_GA"].outputs.qualix_link }}'
@@ -7,7 +7,7 @@ outputs:
   VM IP:
     value: '{{ .grains.["CloudShell_2023_1_GA"].outputs.vsphere_virtual_machine_default_ip_address }}'
   VM Name:
-    value: '{{ .grains.["CloudShell_2023_1GA"].outputs.vsphere_virtual_machine_name }}'
+    value: '{{ .grains.["CloudShell_2023_1_GA"].outputs.vsphere_virtual_machine_name }}'
   OS Login:
     value: Administrator
   Os Password:
